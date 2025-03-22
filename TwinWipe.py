@@ -4,10 +4,7 @@ import shutil
 from PIL import Image
 
 def calculate_image_hash(filepath):
-    """Calculates a hash for an image file.
-
-        A string representing the hash of the image, or None if an error occurred.
-    """
+    """Calculate a hash for each image file or none if an error"""
     try:
         with Image.open(filepath) as img:
             img = img.convert("RGB")
